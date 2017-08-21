@@ -34,7 +34,7 @@ if __name__ == '__main__':
     
     df_merged2 = df_merged2.sample(frac=1).reset_index(drop=True)
     
-    df_merged2.to_pickle('./sample/sample.pkl')
+    df_merged2.to_pickle('./data/sample.pkl')
     
     #full property sample for autoencoder
     file1 = './downloads/properties_2016.csv'
@@ -45,4 +45,4 @@ if __name__ == '__main__':
     cols_remove = cols_categorical[nu>=50]
     cols_dummy = cols_categorical[nu<50]
     df1 = pd.get_dummies(df1.drop(cols_remove, axis=1), dummy_na=True, columns=cols_dummy)
-    df1.to_pickle('./sample/full_properties_2016.pkl')
+    df1.to_pickle('./data/full_properties_2016.pkl')
