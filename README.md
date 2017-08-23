@@ -25,3 +25,5 @@ Possible to improve on:
 1. Remove meaningless inputs such as censusid/countyid to avoid overfitting.
 2. Spend more time in tuning autoencoder 
 3. Use external data source such as census data (is this legit?)
+
+oh wait... Why don't I do a ensemble model at the end?
