@@ -26,7 +26,7 @@ if __name__ == '__main__':
     cols_remove = cols_categorical[nu>=50]
     cols_dummy = cols_categorical[nu<50]
     
-    df_merged2 = pd.get_dummies(df_merged.drop(cols_remove, axis=1), dummy_na=True, columns=cols_dummy)
+    df_merged2 = pd.get_dummies(df_merged.drop(cols_remove, axis=1), columns=cols_dummy)
     df_merged2.head()
     df_merged2.info()
     df_merged2.columns
@@ -44,5 +44,5 @@ if __name__ == '__main__':
     print(nu)
     cols_remove = cols_categorical[nu>=50]
     cols_dummy = cols_categorical[nu<50]
-    df1 = pd.get_dummies(df1.drop(cols_remove, axis=1), dummy_na=True, columns=cols_dummy)
+    df1 = pd.get_dummies(df1.drop(cols_remove, axis=1), columns=cols_dummy)
     df1.to_pickle('./data/full_properties_2016.pkl')
